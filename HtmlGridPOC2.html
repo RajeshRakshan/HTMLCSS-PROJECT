@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         /* Concepts covered- auto/repeat/minmax */
+        .parent1{
+            background-color: rgb(184, 184, 184);
+        display: grid;
+        grid-template-columns: 150px 300px 150px 150px;
+        grid-template-rows: 150px 300px 150px;
+        gap: 20px;
+        height: 1000px;
+        width: 1000px;
+        
+        }
+        .parent2{
+            background-color: rgb(184, 184, 184);
+        display: grid;
+         /*------------------------------------------------- repeat concept------------------------------------------ */
+        grid-template-columns: repeat(3,100px 1fr);
+        /*column will be repeated as much we given  in pattern example=repeat(3,100px 1fr);*/
+        grid-template-rows: 150px 300px 150px;
+        gap: 20px;
+        height: 1000px;
+        width: 1000px;
+        
+        }
+        .parent3{
+            background-color: rgb(184, 184, 184);
+        display: grid;
+        /*------------------------------------------------- max min concept------------------------------------------ */
+        grid-template-columns: 100px 200px minmax(100px,200px);
+        /* min value is end of shrinkage size  max value last of extend size */
+        grid-template-rows: 150px 300px 150px;
+        gap: 20px;
+        height: 1000px;
+        width: 1000px;
+        
+        }
+        .parent4{
+            /*------------------------------------------------- AUTO concept------------------------------------------ */
+/* AUTO is same like 1fr  but different is AUTO will get  priority when 1fr is not in use till then it will take content requirement */
+            background-color: rgb(184, 184, 184);
+        display: grid;
+        grid-template-columns:100px 1fr auto ;
+        grid-template-rows: 150px 300px 150px;
+        gap: 20px;
+        height: 1000px;
+        width: 1000px;
+        
+        }
+        .parent5{
+             /*------------------------------------------------- AUTO concept------------------------------------------ */
+/* AUTO is same like 1fr but different is AUTO will get  priority when 1fr is not in use */
+/* Total space(3column)=content space+(Balance/3)---Balance is without gap  */
+background-color: rgb(184, 184, 184);
+        display: grid;
+        grid-template-columns:100px 200px auto auto ;
+        grid-template-rows: 150px 300px 150px;
+        gap: 20px;
+        height: 1000px; 
+        width: 1000px;
+        
+        }
+        .c1{ background-color: rgb(26, 125, 226);  }
+        .c2{ background-color: rgb(126, 226, 25);}
+        .c3{ background-color: rgb(71, 114, 156); 
+            height: 100px;}
+        .c4{ background-color: rgb(33, 145, 37);}
+        .c5{ background-color: rgb(227, 161, 61);}
+        .c6{ background-color: rgb(167, 35, 97);}
+        .c7{ background-color: rgb(222, 246, 8);}
+        .c8{ background-color: rgb(244, 9, 28); }
+        .c9{ background-color: rgb(8, 241, 210);}
+        .c10{ background-color: rgb(189, 43, 43);}
+        </style>
+        </head>
+        <body>
+            <div class="parent1">
+                <div class="c1 c"><h3>Rajesh</h3></div>
+                <div class="c2 c"><h1>Rakshan</h1></div>
+                <div class="c3 c"><h2>Jayashree</h2></div>
+                <div class="c4 c">Sugan</div>
+                <div class="c5 c">Prabha</div>
+                <div class="c6 c">Bhankya</div>
+                <div class="c7 c">Kalai</div>
+                <div class="c8 c">Ari</div>
+                <div class="c9 c">Paramesh</div>
+                <div class="c10 c">Prakash</div>
+               </div>
+               <div class="parent2">
+                <div class="c1 c"><h3>Rajesh</h3></div>
+                <div class="c2 c"><h1>Rakshan</h1></div>
+                <div class="c3 c"><h2>Jayashree</h2></div>
+                <div class="c4 c">Sugan</div>
+                <div class="c5 c">Prabha</div>
+                <div class="c6 c">Bhankya</div>
+                <div class="c7 c">Kalai</div>
+                <div class="c8 c">Ari</div>
+                <div class="c9 c">Paramesh</div>
+                <div class="c10 c">Prakash</div>
+               </div>
+               <div class="parent3">
+                <div class="c1 c"><h3>Rajesh</h3></div>
+                <div class="c2 c"><h1>Rakshan</h1></div>
+                <div class="c3 c"><h2>Jayashree</h2></div>
+                <div class="c4 c">Sugan</div>
+                <div class="c5 c">Prabha</div>
+                <div class="c6 c">Bhankya</div>
+                <div class="c7 c">Kalai</div>
+                <div class="c8 c">Ari</div>
+                <div class="c9 c">Paramesh</div>
+                <div class="c10 c">Prakash</div>
+               </div>
+               <div class="parent4">
+                <div class="c1 c"><h3>Rajesh</h3></div>
+                <div class="c2 c"><h1>Rakshan</h1></div>
+                <div class="c3 c"><h2>Jayashree</h2></div>
+                <div class="c4 c">Sugan</div>
+                <div class="c5 c">Prabha</div>
+                <div class="c6 c">Bhankya</div>
+                <div class="c7 c">Kalai</div>
+                <div class="c8 c">Ari</div>
+                <div class="c9 c">Paramesh</div>
+                <div class="c10 c">Prakash</div>
+               </div>
+               <div class="parent5">
+                <div class="c1 c"><h3>Rajesh</h3></div>
+                <div class="c2 c"><h1>Rakshan</h1></div>
+                <div class="c3 c"><h2>Jayashree</h2></div>
+                <div class="c4 c">Sugan</div>
+                <div class="c5 c">Prabha</div>
+                <div class="c6 c">Bhankya</div>
+                <div class="c7 c">Kalai</div>
+                <div class="c8 c">Ari</div>
+                <div class="c9 c">Paramesh</div>
+                <div class="c10 c">Prakash</div>
+               </div>
+        </body>
+        </html>
